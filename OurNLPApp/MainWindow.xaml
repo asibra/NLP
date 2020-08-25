@@ -1,0 +1,333 @@
+﻿<Window x:Class="OurNLPApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OurNLPApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="780.355" Width="1433.016">
+    <Window.Resources>
+        <Storyboard x:Key="NetworkStartAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="NetworkGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="NetworkGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="NetworkGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform Angle="-86.186" CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FFD8B7FC" Offset="1"/>
+                <GradientStop Color="#FF8852FF" Offset="0.544"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="101*"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Margin="-5,11.972,-5,-5" BorderBrush="{x:Null}" Background="#FFF6F7FB" Grid.Row="1">
+            <TabItem Header="DataGrid" BorderBrush="{x:Null}" Background="#FFFF4C87" Margin="0">
+                <Grid Background="#FFF5F6FA" Margin="0,0,-3,-7.5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="myGrid" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0" AutoGeneratingColumn="MyGrid_AutoGeneratingColumn" Background="White" BorderBrush="{x:Null}"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="All Persons" BorderBrush="{x:Null}" Background="#FF8E44AD" Margin="0">
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <WrapPanel x:Name="WPanel" UseLayoutRounding="False">
+                        </WrapPanel>
+                    </ScrollViewer>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabItem" Header="Network" BorderBrush="{x:Null}" Background="#FF00C828" Margin="0" >
+                <Grid x:Name="NetworkGrid" Background="#FFF6F7FB" RenderTransformOrigin="0.5,0.5">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Canvas Margin="30.67,-0.294,0,0">
+                        <Path x:Name="P4" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="341.718" Stretch="Fill" VerticalAlignment="Top" Width="667.18" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="649.24" Canvas.Top="92.475">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P13" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="129.069" Stretch="Fill" VerticalAlignment="Top" Width="447.788" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="599.186" Canvas.Top="181.55">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P10" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="100.554" Stretch="Fill" VerticalAlignment="Top" Width="232.88" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="422.39" Canvas.Top="368.307">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleY="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P3" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="212.971" Stretch="Fill" VerticalAlignment="Top" Width="723.728" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="596.966" Canvas.Top="95.349">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P11" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="9.088" Stretch="Fill" VerticalAlignment="Top" Width="490.784" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="563.439" Canvas.Top="166.54">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleY="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P1" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="302.254" Stretch="Fill" VerticalAlignment="Top" Width="168.614" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="352.523" Canvas.Top="88.207">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P7" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="439.488" Stretch="Fill" VerticalAlignment="Top" Width="579.184" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="684.988" Canvas.Top="108.84">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P8" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="422.87" Stretch="Fill" VerticalAlignment="Top" Width="318.606" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="699.028" Canvas.Top="187.649">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P9" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="218.708" Stretch="Fill" VerticalAlignment="Top" Width="64.1" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="663.53" Canvas.Top="282.98">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P6" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="65.84" Stretch="Fill" VerticalAlignment="Top" Width="230.542" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="369.559" Canvas.Top="330.164">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-34.782"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P5" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="224.146" Stretch="Fill" VerticalAlignment="Top" Width="138.899" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="422.881" Canvas.Top="194.012">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-47.843"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P12" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="186.956" Stretch="Fill" VerticalAlignment="Top" Width="184.61" Stroke="#FFC13448" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Canvas.Left="559.025" Canvas.Top="103.856">
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="67.069"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                        <Path x:Name="P2" Data="M580,287.04 L401.5,101.04001" HorizontalAlignment="Left" Height="283" Stretch="Fill" VerticalAlignment="Top" Width="219" Stroke="#FFC13448" StrokeThickness="4" Canvas.Left="375.33" Canvas.Top="39"/>
+                        <local:Persons x:Name="Card1" Canvas.Top="131.778"/>
+                        <local:Persons x:Name="Card2" Canvas.Left="94.5" Canvas.Top="0.294"/>
+                        <local:Persons x:Name="Card3" Canvas.Left="1066.031" Canvas.Top="39"/>
+                        <local:Persons x:Name="Card4" Canvas.Left="1086.669" Canvas.Top="183.016"/>
+                        <local:Persons x:Name="Card5" Canvas.Left="81" Canvas.Top="254.262"/>
+                        <local:Persons x:Name="Card6" Canvas.Left="94.5" Canvas.Top="378.205"/>
+                        <local:Persons x:Name="Card7" Canvas.Left="1076.669" Canvas.Top="327"/>
+                        <local:Persons x:Name="Card8" Canvas.Left="853.742" Canvas.Top="465.984"/>
+                        <local:Persons x:Name="Card9" Canvas.Left="506.677" Canvas.Top="444.205"/>
+                        <local:Persons x:Name="Card10" Canvas.Left="195" Canvas.Top="497.705"/>
+                        <local:Persons x:Name="Card11" Canvas.Left="754.354"/>
+                        <local:Persons x:Name="Card12" Canvas.Left="424.354" Canvas.Top="39"/>
+                        <local:Persons x:Name="Card13" Canvas.Left="769.992" Canvas.Top="139.278"/>
+                        <Ellipse Fill="#FFC13448" HorizontalAlignment="Left" Height="142.5" VerticalAlignment="Top" Width="142.5" Canvas.Left="529.83" Canvas.Top="250.746"/>
+                        <TextBlock Height="52.5" Canvas.Left="565.83" TextWrapping="Wrap" Text="POK" Canvas.Top="294.153" Width="81" FontSize="36" Foreground="White"/>
+                    </Canvas>
+                    <Label x:Name="DateTextBox" Content="Label" HorizontalAlignment="Right" Height="83" Margin="0,0,10.5,32.355" VerticalAlignment="Bottom" Width="123.516" FontSize="20" Background="{x:Null}" Foreground="#FFC13448"/>
+                    <Slider x:Name="Slider1" Height="27.355" Margin="30.67,0,34,0" VerticalAlignment="Bottom" TickPlacement="TopLeft" SmallChange="1" Maximum="2013" Cursor="Hand" Minimum="1996" ValueChanged="Slider_ValueChanged"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="connections" BorderBrush="{x:Null}" Background="#FF6C75FF" Margin="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" Background="White" >
+                        <StackPanel x:Name="SPanel" Margin="34.5,36,491.516,0" >
+                        </StackPanel>
+                    </ScrollViewer>
+                    <Button x:Name="FindConnection" Content="Find Connection" Height="49.437" Width="112.5" BorderBrush="{x:Null}" Background="#FF8852FF" Click="FindConnection_Click" Margin="0,32.479,37.258,0" VerticalAlignment="Top" HorizontalAlignment="Right" Foreground="White"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Event Grid" BorderBrush="{x:Null}" Background="#FFE32652" Margin="0">
+                <Grid>
+                    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" >
+                        <DataGrid x:Name="EventGrid" AutoGeneratingColumn="EventGrid_AutoGeneratingColumn">
+
+                        </DataGrid>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Explanations of the disappearing" BorderBrush="{x:Null}" Margin="0" Background="#FF604BFE">
+                <Grid>
+                    <Canvas Margin="49.5,55.5,943.016,45.403">
+                        <Rectangle Fill="White" RadiusY="19.361" RadiusX="19.361" Height="571.5" Width="436.5">
+                            <Rectangle.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="22" Opacity="0.225"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <TextBlock x:Name="textb1" HorizontalAlignment="Left" Height="545" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" FontSize="14" Foreground="#FF8E44AD" Canvas.Left="16.5" Canvas.Top="16.5" FontWeight="Bold"/>
+                    </Canvas>
+                    <Canvas Margin="597,39,395.516,334.903">
+                        <Rectangle Fill="White" RadiusY="19.361" RadiusX="19.361" Height="298.5" Width="436.5">
+                            <Rectangle.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="22" Opacity="0.225"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <TextBlock x:Name="textb2" HorizontalAlignment="Left" Height="261.548" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" FontSize="14" Foreground="#FF604BFE" Canvas.Left="16.5" Canvas.Top="16.5" FontWeight="Bold"/>
+                    </Canvas>
+                    <Ellipse Fill="#FF604BFE" HorizontalAlignment="Left" Height="52.5" Margin="575.5,20.048,0,0" VerticalAlignment="Top" Width="52.5"/>
+                    <Label Content="1" HorizontalAlignment="Left" Height="48" Margin="590.5,24.548,0,0" VerticalAlignment="Top" Width="31" Foreground="White" FontSize="22"/>
+                    <Canvas Margin="597,352.5,395.516,21.403">
+                        <Rectangle Fill="White" RadiusY="19.361" RadiusX="19.361" Height="298.5" Width="436.5">
+                            <Rectangle.Effect>
+                                <DropShadowEffect ShadowDepth="0" BlurRadius="22" Opacity="0.225"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <TextBlock x:Name="textb3" HorizontalAlignment="Left" Height="261.548" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" FontSize="14" Foreground="#FFFF4C87" Canvas.Left="16.5" Canvas.Top="16.5" FontWeight="Bold"/>
+                    </Canvas>
+                    <Ellipse Fill="#FFFF4C87" HorizontalAlignment="Left" Height="52.5" Margin="575.5,333.548,0,0" VerticalAlignment="Top" Width="52.5"/>
+                    <Label Content="2" HorizontalAlignment="Left" Height="48" Margin="590.5,338.048,0,0" VerticalAlignment="Top" Width="31" Foreground="White" FontSize="22"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <ComboBox x:Name="combo" HorizontalAlignment="Right" Height="22.465" Margin="0,19.555,264,0" VerticalAlignment="Top" Width="159" BorderBrush="{x:Null}" Background="{x:Null}"/>
+        <TextBox x:Name="Searchtextbox" HorizontalAlignment="Right" Height="22.465" Margin="0,21.556,94,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149.5" Grid.RowSpan="2"/>
+        <Button Content="" HorizontalAlignment="Right" Height="41.937" Margin="1281.016,14.056,13,0" VerticalAlignment="Top" Width="55.5" BorderBrush="{x:Null}" Click="Button_Click" Grid.RowSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="download (8).png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="EventBtn" Content="Find Events" HorizontalAlignment="Left" Height="41.937" VerticalAlignment="Top" Width="78" BorderBrush="{x:Null}" Background="#FF16A085" Click="EventBtn_Click" Margin="1281.016,10,0,0" Grid.RowSpan="2" Visibility="Hidden"/>
+        <Grid  Margin="10,10,0,0" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave" HorizontalAlignment="Left" VerticalAlignment="Top" Height="41.937" Width="46.5" Grid.RowSpan="2" ToolTip="Convert text to database">
+            <Rectangle x:Name="TextToDB" Margin="0" Fill="#00000000" RadiusY="10.5" RadiusX="10.5"/>
+
+            <Rectangle Height="28.437" Width="36" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="download (2).png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </Grid>
+        <Grid  Margin="59.5,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="41.937" Width="46.5" MouseEnter="Grid_MouseEnter_1" MouseLeave="Grid_MouseLeave_1" Grid.RowSpan="2" ToolTip="Remove records without POK from DB">
+            <Rectangle x:Name="RemoveRecord" Margin="0" Fill="#00000000" RadiusY="10.5" RadiusX="10.5"/>
+
+            <Rectangle Height="28.437" Width="36" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown_1">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="download (3).png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </Grid>
+        <Grid  Margin="112,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="41.937" Width="46.5" Grid.RowSpan="2" MouseEnter="Grid_MouseEnter_2" MouseLeave="Grid_MouseLeave_2" ToolTip="Finds all names in DB">
+            <Rectangle x:Name="FindNames" Margin="0" Fill="#00000000" RadiusY="10.5" RadiusX="10.5"/>
+
+            <Rectangle Height="28.437" Width="36" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown_2">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="download (4).png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </Grid>
+        <Grid  Margin="167.5,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="41.937" Width="46.5" Grid.RowSpan="2" MouseEnter="Grid_MouseEnter_3" MouseLeave="Grid_MouseLeave_3" ToolTip="Find the time Lapse">
+            <Rectangle x:Name="TimeLapse" Margin="0" Fill="#00000000" RadiusY="10.5" RadiusX="10.5"/>
+
+            <Rectangle Height="28.437" Width="36" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown_3">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="download (6).png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </Grid>
+        <Grid  Margin="167.5,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="41.937" Width="46.5" Grid.RowSpan="2" Visibility="Hidden">
+            <Rectangle x:Name="FindNames1" Margin="0" Fill="#00000000" RadiusY="10.5" RadiusX="10.5"/>
+
+            <Rectangle Height="28.437" Width="36" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown_4">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="download (7).png" Stretch="Uniform"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </Grid>
+
+    </Grid>
+</Window>

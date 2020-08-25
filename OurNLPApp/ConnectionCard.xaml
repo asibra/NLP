@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="OurNLPApp.ConnectionCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OurNLPApp"
+             mc:Ignorable="d" Height="190.322" Width="737.096">
+    <Grid>
+        <Path Data="M233.87097,162.90323 L467.24191,162.90323" HorizontalAlignment="Left" Height="11" Margin="248.226,69.193,0,0" Stretch="Fill" Stroke="#FFBD2F2F" StrokeThickness="3" VerticalAlignment="Top" Width="244.371"/>
+        <Grid Margin="14.838,16.452,438.013,44.886">
+            <Rectangle Fill="#FF2D2D30" HorizontalAlignment="Left" Height="106.24" RadiusY="19.361" RadiusX="19.361" VerticalAlignment="Top" Width="284.245"/>
+            <Image HorizontalAlignment="Left" Height="97.313" VerticalAlignment="Top" Width="88.36" Source="610120.png" Margin="14.803,17.315,0,0"/>
+            <Rectangle RadiusY="11.136" RadiusX="11.136" Margin="116.583,18.064,4.661,83.919" Fill="#FF16A085" Height="27" Width="163"/>
+            <TextBlock x:Name="Name1"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" HorizontalAlignment="Center" Height="15.802" Margin="125.226,23.415,13.519,89.767" Width="145.5" FontSize="10" />
+            <Grid x:Name="Leader1" Margin="117.73,51.923,110.886,40.963" Visibility="Hidden">
+                <Rectangle Fill="#FFC0392B" HorizontalAlignment="Left" Height="26.774" RadiusY="10.968" RadiusX="10.968" VerticalAlignment="Top" Width="45.967" Margin="5.161,1.613,0,0"/>
+                <Label Content="leader" HorizontalAlignment="Left" Height="24.883" Margin="10.806,3.226,-0.717,0" VerticalAlignment="Top" Width="43.548" FontSize="9" Foreground="White"/>
+            </Grid>
+            <Grid x:Name="POK1" Margin="176.367,51.923,74.265,40.963" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Rectangle Fill="#FF8E44AD" HorizontalAlignment="Left" Height="26.774" RadiusY="10.968" RadiusX="10.968" VerticalAlignment="Top" Width="29.638" Margin="1,1.613,0,0"/>
+                <Label Content="POK" HorizontalAlignment="Left" Height="24.883" Margin="1.806,3.226,0,0" VerticalAlignment="Top" Width="32.832" FontSize="9" Foreground="White"/>
+            </Grid>
+            <Grid x:Name="textgrid1" Margin="77.492,59.143,16.601,0" Visibility="Hidden">
+                <Rectangle Fill="White" HorizontalAlignment="Left" Height="59.818" Margin="4.465,6.523,0,0" RadiusY="30.558" RadiusX="30.558" VerticalAlignment="Top" Width="183.695"/>
+                <Path Data="M87.49162,69.142692 C87.49162,69.142692 100.92208,82.21383 127.93231,80.357114 154.94254,78.500398 146.33079,99.455076 138.82034,101.41526 131.30989,103.37544 101.88207,89.719392 101.88207,89.719392 z" Fill="White" HorizontalAlignment="Left" Height="32.464" Stretch="Fill" VerticalAlignment="Top" Width="58.845"/>
+                <TextBlock x:Name="Des" HorizontalAlignment="Left" Height="42.733" Margin="20.928,16.108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151.269" FontSize="10"/>
+            </Grid>
+        </Grid>
+        <Grid x:Name="Card2" Margin="432.581,16.452,20.27,44.886">
+            <Rectangle Fill="#FF2D2D30" HorizontalAlignment="Left" Height="106.24" RadiusY="19.361" RadiusX="19.361" VerticalAlignment="Top" Width="284.245"/>
+            <Image HorizontalAlignment="Left" Height="97.313" VerticalAlignment="Top" Width="88.36" Source="610120.png" Margin="14.803,17.315,0,0"/>
+            <Rectangle RadiusY="11.136" RadiusX="11.136" Margin="116.584,18.064,4.661,83.919" Fill="#FF16A085" Height="27" Width="163"/>
+            <TextBlock x:Name="Name2"  TextWrapping="Wrap" Text="" VerticalAlignment="Center" HorizontalAlignment="Center" Height="15.802" Margin="125.226,23.415,13.519,89.767" Width="145.5" FontSize="10" />
+            <Grid x:Name="Leader2" Margin="117.73,51.923,110.886,40.963" Visibility="Hidden">
+                <Rectangle Fill="#FFC0392B" HorizontalAlignment="Left" Height="26.774" RadiusY="10.968" RadiusX="10.968" VerticalAlignment="Top" Width="45.967" Margin="5.161,1.613,0,0"/>
+                <Label Content="leader" HorizontalAlignment="Left" Height="24.883" Margin="10.806,3.226,-0.717,0" VerticalAlignment="Top" Width="43.548" FontSize="9" Foreground="White"/>
+            </Grid>
+            <Grid x:Name="POK2" Margin="176.367,51.923,74.265,40.963" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Rectangle Fill="#FF8E44AD" HorizontalAlignment="Left" Height="26.774" RadiusY="10.968" RadiusX="10.968" VerticalAlignment="Top" Width="29.638" Margin="1,1.613,0,0"/>
+                <Label Content="POK" HorizontalAlignment="Left" Height="24.883" Margin="1.806,3.226,0,0" VerticalAlignment="Top" Width="32.832" FontSize="9" Foreground="White"/>
+            </Grid>
+            <Grid x:Name="textgrid2" Margin="77.492,59.143,16.601,0" Visibility="Hidden">
+                <Rectangle Fill="White" HorizontalAlignment="Left" Height="59.818" Margin="4.465,6.523,0,0" RadiusY="30.558" RadiusX="30.558" VerticalAlignment="Top" Width="183.695"/>
+                <Path Data="M87.49162,69.142692 C87.49162,69.142692 100.92208,82.21383 127.93231,80.357114 154.94254,78.500398 146.33079,99.455076 138.82034,101.41526 131.30989,103.37544 101.88207,89.719392 101.88207,89.719392 z" Fill="White" HorizontalAlignment="Left" Height="32.464" Stretch="Fill" VerticalAlignment="Top" Width="58.845"/>
+                <TextBlock x:Name="Des1" HorizontalAlignment="Left" Height="42.733" Margin="20.928,16.108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151.269" FontSize="10"/>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</UserControl>
